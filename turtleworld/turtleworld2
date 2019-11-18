@@ -337,18 +337,18 @@
       <pose frame=''>0.497681 0 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>28775 510000000</sim_time>
-      <real_time>73 686482301</real_time>
-      <wall_time>1574055549 810785237</wall_time>
-      <iterations>7238</iterations>
+      <sim_time>28703 130000000</sim_time>
+      <real_time>303 654798921</real_time>
+      <wall_time>1574055185 182234876</wall_time>
+      <iterations>29837</iterations>
       <model name='Dumpster'>
-        <pose frame=''>-2.0016 -1.5316 0.000784 3e-06 -0.000204 0</pose>
+        <pose frame=''>-2.0016 -1.5316 0.000784 3e-06 0.000204 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>-2.0016 -1.5316 0.000784 3e-06 -0.000204 0</pose>
+          <pose frame=''>-2.0016 -1.5316 0.000784 3e-06 0.000204 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.006895 0 0 0 -0.246922 -5.8e-05</acceleration>
-          <wrench>-0.006895 0 0 0 -0 0</wrench>
+          <acceleration>0.006895 0 0 0 0.246922 5.8e-05</acceleration>
+          <wrench>0.006895 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='bookshelf'>
@@ -382,10 +382,10 @@
         </link>
       </model>
       <model name='jersey_barrier_0'>
-        <pose frame=''>1.39361 -3.68976 0 0 -0 0.507732</pose>
+        <pose frame=''>1.42096 -3.62123 0 0 -0 0.455206</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose frame=''>1.39361 -3.68976 0 0 -0 0.507732</pose>
+          <pose frame=''>1.42096 -3.62123 0 0 -0 0.455206</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -432,25 +432,25 @@
         </link>
       </model>
       <model name='mobile_base'>
-        <pose frame=''>-1.40883 0.222361 -0.001131 7.1e-05 -0.007997 -1.31781</pose>
+        <pose frame=''>-1.41878 0.220641 -0.001131 5.4e-05 -0.007995 -1.29127</pose>
         <scale>1 1 1</scale>
         <link name='base_footprint'>
-          <pose frame=''>-1.40883 0.222361 -0.001131 7.1e-05 -0.007997 -1.31781</pose>
-          <velocity>7.4e-05 7e-06 7e-06 -0.000132 0.00041 -0.000287</velocity>
-          <acceleration>0 0.000303 -0.002969 0.01511 -0.006146 -0.003739</acceleration>
-          <wrench>0 0.001423 -0.013947 0 -0 0</wrench>
+          <pose frame=''>-1.41878 0.220641 -0.001131 5.4e-05 -0.007995 -1.29127</pose>
+          <velocity>-5.8e-05 -1e-06 -1.3e-05 -0.000199 0.001331 -0.000187</velocity>
+          <acceleration>-0.000114 -1.2e-05 -0.002435 -0.008378 0.102194 0.029284</acceleration>
+          <wrench>-0.000537 -5.4e-05 -0.011438 0 -0 0</wrench>
         </link>
         <link name='wheel_left_link'>
-          <pose frame=''>-1.29759 0.251419 0.035154 -1.57088 -0.929911 -1.31775</pose>
-          <velocity>9.6e-05 -2.1e-05 -4.2e-05 -0.000132 0.00041 -0.000287</velocity>
-          <acceleration>-0.003583 0.004837 0.825998 -0.02691 0.078276 -0.00498</acceleration>
-          <wrench>-3.6e-05 4.8e-05 0.00826 0 -0 0</wrench>
+          <pose frame=''>-1.30834 0.25264 0.035009 -1.57088 -0.929484 -1.2912</pose>
+          <velocity>-5e-06 -1.5e-05 -0.000166 -0.000199 0.001331 -0.000187</velocity>
+          <acceleration>0.050177 -0.001215 -2.35216 0.043418 -0.151253 0.017183</acceleration>
+          <wrench>0.000502 -1.2e-05 -0.023522 0 -0 0</wrench>
         </link>
         <link name='wheel_right_link'>
-          <pose frame=''>-1.52025 0.193845 0.034963 1.57083 -0.522149 1.82377</pose>
-          <velocity>8e-05 4.3e-05 5.6e-05 -0.000132 0.00041 -0.000287</velocity>
-          <acceleration>-0.002787 -0.002538 0.68 0.036718 0.081988 -0.002798</acceleration>
-          <wrench>-2.8e-05 -2.5e-05 0.0068 0 -0 0</wrench>
+          <pose frame=''>-1.5294 0.189178 0.034842 1.57084 -0.52277 1.85031</pose>
+          <velocity>-1.7e-05 2.7e-05 0.000141 -0.000199 0.001331 -0.000187</velocity>
+          <acceleration>0.003556 0.006646 -1.94209 0.035072 -0.122181 0.01128</acceleration>
+          <wrench>3.6e-05 6.6e-05 -0.019421 0 -0 0</wrench>
         </link>
       </model>
       <model name='unit_cylinder_1'>
