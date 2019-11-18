@@ -1,5 +1,5 @@
 <launch>
    <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
-      <arg name="world_file" value="$(find modturtlebot)/turtleworld/turtleworld"/>
-   </include>
+   <arg name="world_file" value="$(find modturtlebot)/turtleworld/turtleworld"/>
+  </include>
 </launch>
