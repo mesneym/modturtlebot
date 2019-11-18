@@ -31,19 +31,24 @@ TurtleBot::TurtleBot() {
   // Setup subscriber to subscriber to scan obstacles
   sub = n.subscribe("/scan", 1000, &TurtleBot::scanEnvCallBack, this);
 
-  thresdist = 1.5; // setting threshold dist
+  thresdist = 1.5; // setting threshold distance
 }
 
 TurtleBot::~TurtleBot() {}
 
 void TurtleBot::scanEnvCallBack(const sensor_msgs::LaserScan::ConstPtr& msg) {
+  // loop through scan and check if range is below target
+  // set obstacle to true to indicate there is an obstacle ahead
   for (int i = 0; i< msg->ranges.size(); ++i) {
     if (msg->ranges[i] < thresdist) {
-       obstacle = true;
+       if (isnan(msg->ranges[i])) // if values is NAN then turtlebot, then
+                                  // turtlebot has collided with object
+          ROS_ERROR_STREAM("TurtleBot Collided");
+       obstacle = true; // set to true to indicate obstacle ahead
        return;
     }
   }
-  obstacle = false;
+  obstacle = false; // set to false to indicate no obstacle
   return;
 }
 

@@ -44,6 +44,7 @@
 #include <sstream>
 #include <iostream>
 #include <std_msgs/String.h>
+#include <math.h>
 
 class TurtleBot {
  private:
