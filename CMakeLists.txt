@@ -25,5 +25,5 @@ catkin_package()
 
 ## Build talker and listener
 include_directories(include ${catkin_INCLUDE_DIRS})
-add_executable(modturtlebot src/modturtle.cpp)
+add_executable(modturtlebot src/modturtle.cpp src/main.cpp)
 target_link_libraries(modturtlebot ${catkin_LIBRARIES})
