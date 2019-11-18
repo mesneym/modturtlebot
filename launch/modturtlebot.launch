@@ -1,6 +1,5 @@
 <launch>
  <arg name="record" default="false"/>
- 
 
  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
       <arg name="world_file" value="$(find turtlebot_gazebo)/worlds/corridor.world"/>
@@ -10,7 +9,7 @@
  <node pkg="rosbag" 
   type="record" 
   name="rosbagAllTopics"  
-  args="-a --output-name=$(find modturtlebot)/results/record -x /camera/(.*) --duration ='20' "
+  args="-a --output-name=$(find modturtlebot)/results/record -x /camera/(.*) --duration=20"
   if="$(eval record)"
   />
 
