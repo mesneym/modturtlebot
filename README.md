@@ -1,7 +1,6 @@
-# Description  
-This ROS package modifies the turtlebot package to move, sense and   
-avoid obstacles. The turtlebot scans for obstacles in its path and  
-when an object is within some threshold range, the turtlebot adjust 
+# Navigating Obstacles with Turtlebot
+This ROS package modifies the turtlebot package to move, sense and  avoid obstacles. The turtlebot  
+scans for obstacles in its path and when an object is within some threshold range, the turtlebot adjust   
 its direction to avoid collision.
 
 ### Dependencies
@@ -42,26 +41,17 @@ package to workspace and follow the instructions below.
   roslaunch beginner_tutorials beginner_tutorials.launch record:=true
 
 ```
-Wait for 15sec and terminate program  
 
 Enter the command below to view information on the published messages recorded
 ```
   rosbag info record.bag
 ```
 
-To play recorded messages, open new terminals, add package to workspace and follow the instructions
-given below  
-
-Run listener node in one terminal 
-```
-rosrun beginner_tutorials listner
-```
-In the other, run the instruction below to play recorded messages
+On a new terminal, enter the command below to play the record
 ```
 rosbag play record.bag
 
 ```
-Verify messages received by listner node
 
 
 
