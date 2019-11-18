@@ -3,30 +3,34 @@
 #include <ros/ros.h>
 #include <sstream>
 
-class modturtle {
+class TurtleBot {
  private:
    ros::NodeHandle n;
    ros::Publisher pub;
    geometry_msgs::Twist msg;
 
  public:
-    modturtle();
-    ~modturtle();
-    void moveturtle();
+    TurtleBot();
+    ~TurtleBot();
+    void moveTurtleBot();
+    
 };
 
-modturtle::modturtle() {
+TurtleBot::TurtleBot() {
   pub = n.advertise <geometry_msgs::Twist>("/cmd_vel_mux/input/navi", 1000);
 }
 
-modturtle::~modturtle() {
+TurtleBot::~TurtleBot() {
 
 }
 
-void modturtle::moveturtle() {
+void TurtleBot::moveTurtleBot() {
   ros::Rate loop_rate(10); 
+
   while (ros::ok()) {
-    msg.linear.x = 1;
+    //msg.linear.x = 1;
+    msg.linear.z = 1;
+    //msg.angular.z = 1;
     pub.publish(msg);
 
     ros::spinOnce();
@@ -38,9 +42,8 @@ void modturtle::moveturtle() {
 
 int main(int argc, char * argv[]) {
   ros::init(argc,argv,"modturtlebot");
-   
-  modturtle turtlebot;
 
-  turtlebot.moveturtle();
+  TurtleBot turtlebot;
+  turtlebot.moveTurtleBot();
   return 0;
 }
