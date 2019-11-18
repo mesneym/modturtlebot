@@ -38,26 +38,30 @@
  * simple functionality of the sensing and avoiding obstacles for turtebot.
  */
 
+
+#ifndef INCLUDE_MODTURTLEBOT_H_
+#define INCLUDE_MODTURTLEBOT_H_
+
 #include <geometry_msgs/Twist.h>
 #include <sensor_msgs/LaserScan.h>
 #include <ros/ros.h>
 #include <sstream>
 #include <iostream>
-#include <std_msgs/String.h>
-#include <math.h>
+#include "std_msgs/String.h"
+#include "math.h"
 
 class TurtleBot {
  private:
-  ros::NodeHandle n; // Sets up the node
+  ros::NodeHandle n;  // Sets up the node
 
-  ros::Publisher pub; // Needed to publish to topics
+  ros::Publisher pub;  // Needed to publish to topics
 
-  ros::Subscriber sub; // Needed to subcribe to topics
+  ros::Subscriber sub;  // Needed to subcribe to topics
 
-  geometry_msgs::Twist msg; // linear and angular velocities
-                            // Needed to move turtlebot
-  bool obstacle; // Flag to check whether object is near obstacle
-  float thresdist; // Threshold distance for obstacles
+  geometry_msgs::Twist msg;  // linear and angular velocities
+                             // Needed to move turtlebot
+  bool obstacle;  // Flag to check whether object is near obstacle
+  float thresdist;  // Threshold distance for obstacles
 
     /**
      * @brief Callback method after subscribing to callback message 
@@ -102,3 +106,7 @@ class TurtleBot {
      */
     void moveTurtleBot();
 };
+
+#endif  // INCLUDE_MODTURTLEBOT_H_
+
+

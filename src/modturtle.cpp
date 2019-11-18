@@ -31,7 +31,7 @@ TurtleBot::TurtleBot() {
   // Setup subscriber to subscriber to scan obstacles
   sub = n.subscribe("/scan", 1000, &TurtleBot::scanEnvCallBack, this);
 
-  thresdist = 1.5; // setting threshold distance
+  thresdist = 1.5;  // setting threshold distance
 }
 
 TurtleBot::~TurtleBot() {}
@@ -41,29 +41,29 @@ void TurtleBot::scanEnvCallBack(const sensor_msgs::LaserScan::ConstPtr& msg) {
   // set obstacle to true to indicate there is an obstacle ahead
   for (int i = 0; i< msg->ranges.size(); ++i) {
     if (msg->ranges[i] < thresdist) {
-       if (isnan(msg->ranges[i])) // if values is NAN then turtlebot, then
+       if (isnan(msg->ranges[i]))  // if values is NAN then turtlebot, then
                                   // turtlebot has collided with object
           ROS_ERROR_STREAM("TurtleBot Collided");
-       obstacle = true; // set to true to indicate obstacle ahead
+       obstacle = true;  // set to true to indicate obstacle ahead
        return;
     }
   }
-  obstacle = false; // set to false to indicate no obstacle
+  obstacle = false;  // set to false to indicate no obstacle
   return;
 }
 
 
 
 void TurtleBot::moveTurtleBot() {
-  ros::Rate loop_rate(10); // publish rate
+  ros::Rate loop_rate(10);  // publish rate
 
   while (ros::ok()) {
-    pub.publish(msg); // publish message
+    pub.publish(msg);  // publish message
     /* check if there is an  obstacle do the following
     *  Stop, Rotate about z axis, and then Move 
     */
     if (obstacle) {
-      msg.linear.x = 0; // Stop
+      msg.linear.x = 0;  // Stop
       msg.angular.z = 1;  // Rotate about z axis
 
       // Set obstacle to false to indicate it is okay to move
