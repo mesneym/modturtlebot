@@ -35,7 +35,6 @@ roslaunch modturtlebot modturtlebot.launch
 ### Record and Play Topics
 To record published messages and play them at a later time, create a new terminal, add   
 package to workspace and follow the instructions below.
-
 ```
   cd ~/catkin_ws
   roslaunch beginner_tutorials beginner_tutorials.launch record:=true
@@ -53,5 +52,6 @@ rosbag play record.bag
 
 ```
 
+To view already saved rosbag, click on [rosbag](https://drive.google.com/drive/folders/1iC0oEa_GIVzM2kWgU9rPxpvORKPewiUJ?usp=sharing)
 
 
